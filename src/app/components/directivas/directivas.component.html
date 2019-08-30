@@ -1,0 +1,16 @@
+<button type="button" class="btn btn-primary btn-sm" (click)="habilitar = !habilitar">Presionar</button>
+<div *ngIf="habilitar == true">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Curso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let curso of listaCursos">
+      <td>{{curso}}</td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>
