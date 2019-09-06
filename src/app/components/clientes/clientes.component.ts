@@ -9,7 +9,7 @@ import { ClienteService } from './cliente.service';
 })
 export class ClientesComponent implements OnInit {
   clientes: Cliente[];
-  constructor(private clienteService: ClienteService) {}
+  constructor(private clienteService: ClienteService) { }
 
   ngOnInit() {
     this.clienteService
