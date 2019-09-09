@@ -46,4 +46,13 @@ export class FormComponent implements OnInit {
                   }
     );
   }
+  public update(): void {
+    console.log('EDITAR');
+    this.clienteService.update(this.cliente).subscribe(
+      cliente => {
+        this.router.navigate(['/clientes']);
+        swal.fire('Cliente actualizado', `Cliente ${this.cliente.nombre} actualizado con exito!`, 'success');
+      }
+    );
+  }
 }
